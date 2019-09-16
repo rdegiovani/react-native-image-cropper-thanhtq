@@ -69,7 +69,7 @@ RCT_EXPORT_MODULE();
     //cropController.rotateClockwiseButtonHidden = NO;
 
     cropController.doneButtonTitle = @"Enviar";
-    cropController.cancelButtonTitle = @"Cancelar";
+    cropController.cancelButtonTitle = @"Voltar";
 
     // -- Uncomment this line of code to show a confirmation dialog when cancelling --
     //cropController.showCancelConfirmationDialog = YES;
@@ -106,8 +106,7 @@ RCT_EXPORT_METHOD(showViewCrop:(NSString *)urlImage options:(NSDictionary *)opti
     TOCropViewController *cropController = [[TOCropViewController alloc] initWithCroppingStyle:self.croppingStyle image:image];
     cropController.title = @"Recortar Imagem";
     cropController.doneButtonTitle = @"Enviar";
-    cropController.cancelButtonTitle = @"Cancelar";
-    cropController.showCancelConfirmationDialog = YES;
+    cropController.cancelButtonTitle = @"Voltar";
 
 cropController.allowedAspectRatios = @[@(TOCropViewControllerAspectRatioPresetSquare)];
     cropController.aspectRatioPreset = TOCropViewControllerAspectRatioPresetSquare; //Set the initial aspect ratio as a square
