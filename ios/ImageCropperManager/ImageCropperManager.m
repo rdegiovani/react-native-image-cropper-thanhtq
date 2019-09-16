@@ -106,8 +106,10 @@ RCT_EXPORT_METHOD(showViewCrop:(NSString *)urlImage options:(NSDictionary *)opti
     TOCropViewController *cropController = [[TOCropViewController alloc] initWithCroppingStyle:self.croppingStyle image:image];
     cropController.title = @"Recortar Imagem";
     cropController.doneButtonTitle = @"Enviar";
-    cropController.cancelButtonTitle = @"";
-    cropController.allowedAspectRatios = @[@(TOCropViewControllerAspectRatioPresetSquare)];
+    cropController.cancelButtonTitle = @"Cancelar";
+    cropController.showCancelConfirmationDialog = YES;
+
+cropController.allowedAspectRatios = @[@(TOCropViewControllerAspectRatioPresetSquare)];
     cropController.aspectRatioPreset = TOCropViewControllerAspectRatioPresetSquare; //Set the initial aspect ratio as a square
     // -- Uncomment this line of code to place the toolbar at the top of the view controller --
     //cropController.toolbarPosition = TOCropViewControllerToolbarPositionTop;
