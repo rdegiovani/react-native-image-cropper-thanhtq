@@ -111,3 +111,7 @@ let options = {
    })
   ```
  ----------------------END------------------------
+
+## Notes
+
+This repository was created to solve conflict errors on my project
